@@ -1,0 +1,28 @@
+input,
+textarea{
+    color: black;
+    padding: .1rem;
+}
+
+form{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+div#name-field{
+    width: 100%;
+    display: flex;
+    margin: .5em;
+    align-items: center;
+    justify-content: center;
+}
+div#quest-area{
+    width: 100%;
+    display: flex;
+    margin: .5em;
+    align-items: center;
+    justify-content: space-between;
+}

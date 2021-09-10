@@ -1,26 +1,27 @@
 {
-  "name": "opinion",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "ohtml": "ohtml --path ./public --file index.html --port 3000"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/d-r-lenin/opinion.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/d-r-lenin/opinion/issues"
-  },
-  "homepage": "https://github.com/d-r-lenin/opinion#readme",
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.12"
-  }
+	"name": "opinion",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon index.js",
+		"start": "node index.js",
+		"ohtml-index": "ohtml --path ./public --file index.html --port 3000",
+		"ohtml-create": "ohtml --path ./public --file create.html --port 3000"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/d-r-lenin/opinion.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/d-r-lenin/opinion/issues"
+	},
+	"homepage": "https://github.com/d-r-lenin/opinion#readme",
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.12"
+	}
 }
