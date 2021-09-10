@@ -7,7 +7,8 @@
 		"dev": "nodemon index.js",
 		"start": "node index.js",
 		"ohtml-index": "ohtml --path ./public --file index.html --port 3000",
-		"ohtml-create": "ohtml --path ./public --file create.html --port 3000"
+		"ohtml-create": "ohtml --path ./public --file create.html --port 3000",
+		"ohtml-view": "ohtml --path ./public --file view.html --port 3000"
 	},
 	"repository": {
 		"type": "git",
