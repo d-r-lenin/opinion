@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProfile</title>
+    <link rel="stylesheet" href="/css/additional.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_view.css">
+</head>
+<body>
+    <div  class="con-view">
+        <header><h1><%= locals.name %></h1></header>
+        <footer>
+            <label id="copy">Copy</label>
+            <input type="text" aria-selected="true" value="<%= locals.link %>" readonly>
+        </footer>
+        <section>
+            <div class="results-head">Results:</div>
+            <div class="results">
+                <% if(locals.results){ %>
+                    <% for(let r of locals.results){ %>
+                        <p><%= r %></p>
+                    <% } %>
+                <% } %>
+            </div>
+        </section>
+    </div>
+
+    <script>
+    function copyToClipboard(text) {
+        var dummy = document.createElement("textarea");
+        // to avoid breaking orgain page when copying more words
+        // cant copy when adding below this code
+        // dummy.style.display = 'none'
+        document.body.appendChild(dummy);
+        //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+    }
+    const a = document.querySelector('#copy');
+    const link = document.querySelector('footer input');
+    a.addEventListener('click',e=>{
+        copyToClipboard(link.value);
+        alert('Link copied just share it. Refresh anytime to see updated results');
+    })
+    </script>
+</body>
+</html>
