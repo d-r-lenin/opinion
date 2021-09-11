@@ -56,7 +56,7 @@ app.get('/profile/:id',async(req,res)=>{
     try{
         const data = await Name.findById(req.session.id);
         obj.name = data.name;
-        obj.link = 'https://localhost:3000/comment/'+ data.id,
+        obj.link = process.env.HOST_URL+'/comment/'+ data.id,
         obj.results = data.texts || [];
     }catch(e){
         console.log(e);
@@ -76,7 +76,7 @@ app.get('/comment/:id',async(req,res)=>{
         obj.id = data.id;
         res.render('write', obj);
     } catch (error) {
-        res.send('hfnh')
+        res.send('faield');
         console.log(error);
     }
 })
