@@ -25,6 +25,9 @@ app.use(cookieSession({
 }))
 
 app.get('/',(req,res)=>{
+    if(req.session.id){
+        res.redirect('/profile/'+req.session.id);
+    }
     res.render("index");
 })
 
